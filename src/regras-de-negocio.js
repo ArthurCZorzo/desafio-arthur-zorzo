@@ -22,15 +22,12 @@ function pagamento(formaPagamento, somatorio){
         case "dinheiro":
             valorFinal = somatorio - (somatorio * 0.05);
             return valorFinal;
-            break;
         case "debito":
             valorFinal = somatorio;
             return valorFinal;
-            break;
         case "credito":
             valorFinal = somatorio + (somatorio * 0.03);
             return valorFinal;
-            break;
         case "default":
             return "Forma de Pagamento Inválida!";
     }
@@ -40,7 +37,6 @@ function calculaValorCompra(formaPagamento, itens) {
     var codigo = []
     var qntd = []
     var somatorio = 0;
-    var valorFinal = 0;
     var final = 0;
     
     var chantily = false;
@@ -93,7 +89,7 @@ function calculaValorCompra(formaPagamento, itens) {
                 combo2 = true;
                 break;
             default:
-                return "Item inválido!"//Não há itens no carrinho de compra!
+                return "Item inválido!"
         }
         somatorio += valor;
     }
@@ -134,7 +130,8 @@ function calculaValorCompra(formaPagamento, itens) {
     }
     
     if(typeof final == "number"){
-        return "R$ "+(final.toFixed(2)).toString().replace(".",",")
+        var formatado = (final.toFixed(2)).toString().replace(".",",")
+        return "R$ "+ formatado;
     } else {
         return "Forma de pagamento inválida!";
     }
