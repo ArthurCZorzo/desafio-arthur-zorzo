@@ -1,7 +1,9 @@
-class CaixaDaLanchonete {
+import { calculaValorCompra } from "./regras-de-negocio";
 
+class CaixaDaLanchonete {
     calcularValorDaCompra(metodoDePagamento, itens) {
-        return "";
+        //const regrasDeNegocio = require('./regras-de-negocio');
+        return calculaValorCompra(metodoDePagamento, itens);
     }
 
 }
