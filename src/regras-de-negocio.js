@@ -61,20 +61,20 @@ function calculaValorCompra(formaPagamento, itens) {
         var valor = 0;
         switch(codigo[i]){
             case "cafe":
-                valor += 3.00 * qntd[i];
+                valor += 3 * qntd[i];
                 break;
             case "chantily":
-                valor += 1.50 * qntd[i];
+                valor += 1.5 * qntd[i];
                 chantily = true;
                 break;
             case "suco":
-                valor += 6.20 * qntd[i];
+                valor += 6.2 * qntd[i];
                 break;
             case "sanduiche":
-                valor += 6.50 * qntd[i];
+                valor += 6.5 * qntd[i];
                 break;
             case "queijo":
-                valor += 2.00 * qntd[i];
+                valor += 2 * qntd[i];
                 queijo = true;
                 break;
             case "salgado":
